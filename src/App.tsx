@@ -1,52 +1,61 @@
 import { component } from "vue-tsx-support";
-import { VApp, VContent } from "vuetify-tsx";
+import { VToolbarTitle } from "vuetify-tsx";
+import { Menu } from "./utils/constants";
+import { LateralMenu } from "./components/general/LateralMenu";
+import userSession from "./modules/user-session";
+import { STORAGE_USER } from "./utils/constants";
 
 const App = component({
   name: "App",
+  data() {
+    return {
+      drawer: null as boolean | null,
+      menu: Menu,
+      authenticated:
+        window.localStorage.getItem("authenticated") != null
+          ? Boolean(window.localStorage.getItem("authenticated"))
+          : false,
+      user: JSON.parse(window.localStorage.getItem(STORAGE_USER)),
+    };
+  },
+  methods: {
+    updateDrawer(value: boolean) {
+      this.drawer = value;
+    },
+
+    toggleDrawer() {
+      this.drawer = !this.drawer;
+    },
+
+    logout() {
+      userSession.quitSession();
+      this.authenticated = false;
+    },
+  },
   render() {
     return (
-      <VApp>
-        <VContent>
-          <router-view />
-        </VContent>
-      </VApp>
+      <v-app>
+        <v-app-bar app clippedLeft color="primary">
+          <v-app-bar-nav-icon onClick={this.toggleDrawer}></v-app-bar-nav-icon>
+          <VToolbarTitle>Vue - TSX - Vuetify - Template</VToolbarTitle>
+        </v-app-bar>
+
+        <v-main>
+          <v-container fluid>
+            <router-view />
+          </v-container>
+        </v-main>
+
+        <LateralMenu
+          authenticated={this.authenticated}
+          drawer={this.drawer}
+          updateDrawer={this.updateDrawer}
+          logout={this.logout}
+          user={this.user}
+        />
+      </v-app>
     );
   },
 });
 
 export default App;
-
-{
-  /* <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
-  </div>
-</template>
-
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style> */
-}

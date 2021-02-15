@@ -1,0 +1,20 @@
+{
+  "general.cancel": "",
+  "general.accept": "",
+  "general.save": "",
+  "pages.user.email": "",
+  "pages.user.password": "",
+  "pages.user.signin": "",
+  "pages.user.signup": "",
+  "pages.user.signup.title": "",
+  "pages.user.firstname": "",
+  "pages.user.lastname": "",
+  "pages.user.confirm-password": "",
+  "pages.client.form.edit.title": "",
+  "pages.client.form.new.title": "",
+  "pages.client.form.clientType": "",
+  "pages.client.form.dni": "",
+  "pages.client.form.documentScaned": "",
+  "pages.client.form.firstName": "",
+  "pages.client.form.lastName": ""
+}

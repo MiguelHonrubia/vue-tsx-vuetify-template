@@ -1,0 +1,20 @@
+{
+  "general.cancel": "Cancelar",
+  "general.accept": "Aceptar",
+  "general.save": "Guardar",
+  "pages.user.email": "Correo electrónico",
+  "pages.user.password": "Contraseña",
+  "pages.user.signup": "Registrarse",
+  "pages.user.signup.title": "Registro",
+  "pages.user.signin": "Entrar",
+  "pages.user.firstname": "Nombre",
+  "pages.user.lastname": "Apellidos",
+  "pages.user.confirm-password": "Confirmar contraseña",
+  "pages.client.form.edit.title": "Edición de cliente",
+  "pages.client.form.new.title": "Nuevo cliente",
+  "pages.client.form.clientType": "Tipo de cliente",
+  "pages.client.form.dni": "DNI",
+  "pages.client.form.documentScaned": "Documento escaneado",
+  "pages.client.form.firstName": "Nombre",
+  "pages.client.form.lastName": "Apellidos"
+}

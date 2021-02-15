@@ -4,14 +4,18 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "build:dev": "vue-cli-service build --mode development",
+    "build:pre": "vue-cli-service build --mode staging",
+    "build:pro": "vue-cli-service build --mode production",
+    "lint": "vue-cli-service lint",
+    "start:local": "vue-cli-service serve --mode local",
+    "start": "vue-cli-service serve --mode development"
   },
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
+    "vue-i18n": "^8.22.4",
     "vue-property-decorator": "^9.1.2",
     "vue-router": "^3.2.0",
     "vue-tsx-support": "^3.1.0",
