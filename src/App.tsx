@@ -1,5 +1,5 @@
 import { component } from "vue-tsx-support";
-import { VToolbarTitle } from "vuetify-tsx";
+import { VToolbarTitle, VApp, VContainer, VContent } from "vuetify-tsx";
 import { Menu } from "./utils/constants";
 import { LateralMenu } from "./components/general/LateralMenu";
 import userSession from "./modules/user-session";
@@ -34,17 +34,17 @@ const App = component({
   },
   render() {
     return (
-      <v-app>
+      <VApp>
         <v-app-bar app clippedLeft color="primary">
           <v-app-bar-nav-icon onClick={this.toggleDrawer}></v-app-bar-nav-icon>
           <VToolbarTitle>Vue - TSX - Vuetify - Template</VToolbarTitle>
         </v-app-bar>
 
-        <v-main>
-          <v-container fluid>
+        <VContent>
+          <VContainer>
             <router-view />
-          </v-container>
-        </v-main>
+          </VContainer>
+        </VContent>
 
         <LateralMenu
           authenticated={this.authenticated}
@@ -53,7 +53,7 @@ const App = component({
           logout={this.logout}
           user={this.user}
         />
-      </v-app>
+      </VApp>
     );
   },
 });

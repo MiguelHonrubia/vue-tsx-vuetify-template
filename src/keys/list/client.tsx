@@ -1,4 +1,5 @@
 import { listKeys } from "../../types/general/listKey";
+import { component } from "vue-tsx-support";
 
 export const clientListKeys: listKeys[] = [
   {
@@ -7,7 +8,7 @@ export const clientListKeys: listKeys[] = [
     align: "start",
     sortable: false,
   },
-  { value: "tipoPersona", text: "Tipo Persona" },
+  { value: "tipoPersona", text: "Tipo Persona", templateType: "link" },
   { value: "socio", text: "Socio" },
   { value: "codigoPostal", text: "C. Postal" },
   { value: "poblacion", text: "Población" },

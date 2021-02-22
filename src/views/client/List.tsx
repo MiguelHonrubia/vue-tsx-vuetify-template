@@ -9,7 +9,26 @@ export const List = component({
   name: "List",
   data() {
     return {
-      TableItems: [],
+      TableItems: [
+        {
+          nombre: "prueba",
+          tipoPersona: 1,
+          socio: "1234",
+          codigoPostal: "123456",
+          poblacion: "Alicante",
+          movil: "34905794",
+          email: "magarcia@lynxview.com",
+        },
+        {
+          nombre: "prueba 2",
+          tipoPersona: 2,
+          socio: "1234",
+          codigoPostal: "123456",
+          poblacion: "Alicante",
+          movil: "34905794",
+          email: "magarcia@lynxview.com",
+        },
+      ],
     };
   },
   methods: {

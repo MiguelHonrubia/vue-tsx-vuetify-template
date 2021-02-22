@@ -4,5 +4,4 @@ export type listKeys = {
   visible?: false;
   align?: string;
   sortable?: boolean;
-  template?: Vue.Component;
 };

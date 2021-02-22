@@ -10,14 +10,6 @@ export const Menu = [
     icon: "mdi-home-city",
     route: "/home",
     authenticated: true,
-    // menu: [
-    //   {
-    //     title: "About",
-    //     icon: "mdi-account",
-    //     route: "/about",
-    //     authenticated: true,
-    //   },
-    // ],
   },
   {
     title: "Client",
@@ -31,7 +23,7 @@ export const Menu = [
         authenticated: true,
       },
       {
-        title: "NewClient",
+        title: "New",
         icon: "mdi-account",
         route: "/client/new",
         authenticated: true,
