@@ -31,17 +31,6 @@ export const List = component({
       ],
     };
   },
-  methods: {
-    async getClientsList(Filters: any) {
-      this.TableItems = [];
-      const clientList = await getAll(Filters);
-      if (clientList.status == 404) {
-        this.TableItems = [];
-      } else {
-        this.TableItems = clientList;
-      }
-    },
-  },
   render() {
     return (
       <v-container>

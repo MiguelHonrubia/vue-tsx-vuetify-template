@@ -68,7 +68,6 @@ export const ClientForm = component({
               depressed
               color="primary"
               onClick={() => {
-                console.log("Client", this.$refs.form);
                 this.handleSubmit(this.client);
               }}
             >
