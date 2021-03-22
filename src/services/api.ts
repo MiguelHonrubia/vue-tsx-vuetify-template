@@ -131,6 +131,7 @@ export default class Api {
 
   delete(path: string, options: RequestInit) {
     options.headers = options.headers || {};
+    options.headers["Accept"] = options.headers["Accept"] || "*";
     return this.genericRequest("delete", path, options);
   }
 }
